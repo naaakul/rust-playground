@@ -1,9 +1,20 @@
-fn get_string_length(s: String) -> usize {
-    s.chars().count()
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
 }
 
 fn main() {
-    let my_string = String::from("Hello World!");
-    let length = get_string_length(my_string);
-    println!("The length of the text: {}", length);
+    let user1 = User {
+        active: true,
+        username: String::from("nakul"),
+        email: String::from("71.nakul@gmail.com"),
+        sign_in_count: 1,
+    };
+    println!("User 1 username: {:?}", user1.username);
+    println!("User 1 username: {:?}", user1.active);
+    println!("User 1 username: {:?}", user1.email);
+    println!("User 1 username: {:?}", user1.sign_in_count);
 }
+
